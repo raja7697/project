@@ -27,8 +27,8 @@ pipeline {
                 sh '''
             cd target
             unzip LoginWebApp.war
-            sed -i 's|localhost|database-1.cxgmm2giaw5y.ap-south-1.rds.amazonaws.com|g' userRegistration.jsp
-            sed -i 's|"root", "root"|"admin", "12345678"|g' userRegistration.jsp
+            sed -i 's|localhost|database-1.c1acecagmatm.ap-south-1.rds.amazonaws.com|g' userRegistration.jsp
+            sed -i 's|"root", "root"|"admin", "rushi12345"|g' userRegistration.jsp
             rm -f LoginWebApp.war
             zip -r LoginWebApp.war *
                 '''
