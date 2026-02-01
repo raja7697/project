@@ -1,9 +1,19 @@
 pipeline {
     agent any
 
- 
+    tools {
+        // Name must match the Maven installation configured in Jenkins
+        maven 'Maven-3.9.6'
+    }
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/your-org/your-repo.git'
+            }
+        }
 
         stage('clean-repo') {
             steps {
