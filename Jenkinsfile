@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Name must match the Maven installation configured in Jenkins
-        maven 'Maven-3.9.6'
+        maven 'Maven-3.9.12'
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/your-org/your-repo.git'
+                    url: 'https://github.com/raja7697/project.git'
             }
         }
 
